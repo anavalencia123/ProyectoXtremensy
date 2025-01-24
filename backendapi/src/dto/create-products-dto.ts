@@ -10,9 +10,9 @@ export class createProductsDto {
     @IsNotEmpty()
     producto: string;
 
-    @IsString()
+    @IsNumber()
     @IsNotEmpty()
-    referencia: string;
+    referencia: number;
     
     @IsNumber()
     @IsNotEmpty()

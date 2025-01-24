@@ -18,7 +18,7 @@ export class productsService {
         return newproduct.save();
     }
 
-    async finOne(id: string){
+    async findOne(id: string){
         return this.productsModel.findById(id);
     }
 

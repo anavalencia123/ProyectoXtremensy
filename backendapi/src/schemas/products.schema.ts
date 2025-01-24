@@ -23,7 +23,7 @@ export class products {
         unique: true,
         trim: true
     })
-    referencia: string;
+    referencia: number;
 
     @Prop({
         required: true,

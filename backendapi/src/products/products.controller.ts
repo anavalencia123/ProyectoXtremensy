@@ -8,28 +8,28 @@ export class ProductsController {
     constructor(private productsService: productsService) {
     }
 
-    @Post()
-    create() {
-        return 'Se ha creado un nuevo producto';
+    @Post('/')
+    create(@Body() body:createProductsDto) {
+        return this.productsService.create(body);
     }
 
     @Get()
     findAll() {
-        return 'Se han obtenido todos los productos';
+        return this.productsService.finAll();
     }
 
     @Get(':id')
-    findOne() {
-        return 'Se ha obtenido un producto';
+    findOne(@Param('id') id:string) {
+        return this.productsService.findOne(id);
     }
 
     @Put(':id')
-    update() {
-        return 'Se ha actualizado un producto';
+    update(@Param('id') id:string, @Body() body: updateProductsDto) {
+        return this.productsService.update(id,body);
     }
 
     @Delete(':id')
-    delete() {
-        return 'Se ha eliminado un producto';	
+    delete(@Param('id') id:string) {
+        this.productsService.delete(id);	
     }
 }

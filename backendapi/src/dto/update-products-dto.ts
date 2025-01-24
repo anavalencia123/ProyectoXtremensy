@@ -12,7 +12,7 @@ export class updateProductsDto {
 
         @IsString()
         @IsOptional()
-        referencia?: string;
+        referencia?: number;
 
         @IsNumber()
         @IsOptional()
