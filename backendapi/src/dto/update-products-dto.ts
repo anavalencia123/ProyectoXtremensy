@@ -10,7 +10,7 @@ export class updateProductsDto {
         @IsOptional()
         producto?: string;
 
-        @IsString()
+        @IsNumber()
         @IsOptional()
         referencia?: number;
 
