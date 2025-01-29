@@ -46,7 +46,7 @@ export class ProductsController {
     @Put(':id')
     async update(@Param('id') id:string, @Body() body: updateProductsDto){
         try { 
-            const act = this.productsService.update(id,body);
+            const act = await this.productsService.update(id,body);
             if(!act){
                 throw new NotFoundException('La Actividad no Existe');
             }
@@ -58,11 +58,10 @@ export class ProductsController {
 
 
     @Delete(':id')
-
     @HttpCode(204)
     async delete(@Param('id') id:string){
         try {
-            const act = this.productsService.delete(id);
+            const act = await this.productsService.delete(id);
             if (!act ){
                 throw new NotFoundException('El producto no existe');
             } 
