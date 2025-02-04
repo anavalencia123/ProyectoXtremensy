@@ -1,13 +1,12 @@
+import React from 'react';
+import Products from './componentes/Products';
 
-function App() {
-
+const App: React.FC = () => {
   return (
-    <>
-      <div>
-      <h2 className='text-2xl text-ble-500'>BIENVENIDOS A XTREMENSY !</h2>
-      </div>
-    </>
-  )
-}
+    <div className="App">
+      <Products />
+    </div>
+  );
+};
 
-export default App
+export default App;
